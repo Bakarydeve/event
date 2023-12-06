@@ -1,0 +1,8 @@
+Contenu du fichier page_accueil.php !!
+<a href="https://obiwan2.univ-brest.fr/licence/lic10/gabarit/V1/CodeIgniter/index.php/connexion/afficher">connexion</a>
+<h1>
+<?php
+//echo $parametre;
+?>
+</h1>
+

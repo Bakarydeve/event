@@ -1,0 +1,30 @@
+<?php
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Lieu extends CI_Controller {
+
+   public function __construct()
+   {
+      parent::__construct();
+      $this->load->model('db_model');
+      $this->load->helper('url_helper');
+   }
+
+
+   public function afficher()
+   {
+
+      $data['lieu'] = $this->db_model->get_all_lie();
+
+      //Chargement de la view haut.php
+      $this->load->view('templates/haut');
+      //Chargement de la view du milieu : page_accueil.php
+      $this->load->view('menu_lieu',$data);
+      //Chargement de la view du milieu : menu_visiteur.php
+      //$this->load->view('menu_visiteur',$data2);
+      //Chargement de la view bas.php
+       $this->load->view('templates/bas');
+
+   }
+}
+?>
